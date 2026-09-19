@@ -41,7 +41,7 @@ uvicorn app.main:app --reload
 |PUT	|/api/v1/notes/{id} |	Update a note|
 |PATCH	|/api/v1/notes/{id}/archive |	Archive (soft delete)|
 |DELETE	|/api/v1/notes/{id}	|Permanently delete|
-
+----------------------------------
 ## Advanced Filtering Examples
 ```bash
 # Search notes containing "python"
@@ -63,7 +63,7 @@ GET /api/v1/notes?sort_by=title&sort_order=asc
 GET /api/v1/notes?search=python&tags=tutorial&is_pinned=true&sort_by=created_at
 ```
 ## Architecture
-
+```text
 Client → Router → CRUD → Model → Database
          ↓        ↓       ↓
       Schemas  Schemas  Schemas
@@ -75,6 +75,7 @@ CRUD (crud/): Business logic
 Models (models/): Database schema
 
 Schemas (schemas/): Data validation
+```
 
 ## Tech Stack
 FastAPI - Web framework
