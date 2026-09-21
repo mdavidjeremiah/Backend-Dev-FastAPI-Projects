@@ -31,9 +31,9 @@ uvicorn app.main:app --reload
 # http://127.0.0.1:8000/docs
 ```
 ## API Endpoints
-----------------------------------
-|Method	| Endpoint |	Description|
-----------------------------------
+
+| Method	|  Endpoint |	Description|
+|---|---|---|
 |POST	| /api/v1/notes |	Create a new note |
 |GET	|/api/v1/notes |	List notes with filters|
 |GET	|/api/v1/notes/tags	| Get all unique tags|
